@@ -1,10 +1,10 @@
 # DataLattesAPI
 
-Repositorio oficial do DataLattesAPI
+Repositório oficial do DataLattesAPI
 
-O DataLattesAPI é uma biblioteca desenvolvida em Java responsavel por extrair informações do Curriculo Lattes extraido da Plataforma Lattes.
+O DataLattesAPI é uma biblioteca desenvolvida em Java responsável por extrair informações do Currículo Lattes extraído da Plataforma Lattes.
 
-Ao baixar o curriculo na plataforma Lattes ele possui o formato .zip, na sua extração é mostrado um arquivo .xml. Tanto o .zip quanto o .xml e suportado pelo DataLattesAPI
+Ao baixar o currículo na plataforma Lattes ele possui o formato .zip, na sua extração é mostrado um arquivo .xml. Tanto o .zip quanto o .xml e suportado pelo DataLattesAPI
 
 #### Exemplo de Codigo para buscar Artigos:
 
@@ -24,6 +24,27 @@ public class main {
 		ArrayList<ArtigoPublicado> result = dtapi.getProducaoBibliograficaDao().ArtigoPublicado();
 	}
 }
+```
+
+#### Importando biblioteca via Maven:
+
+```xml
+<repositories>
+   <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+   </repository>
+</repositories>
+
+<dependencies>
+   <dependency>
+       <groupId>com.github.weltonah</groupId>
+       <artifactId>DataLattesAPI</artifactId>
+    <version>dc2bf3c3c5</version>
+   </dependency>
+</dependencies>
+
+
 ```
 
 #### Itens que podem ser extraidos utilizando DataLattesAPI:
