@@ -36,13 +36,11 @@ public class main {
    </repository>
 </repositories>
 
-<dependencies>
-   <dependency>
-       <groupId>com.github.weltonah</groupId>
-       <artifactId>DataLattesAPI</artifactId>
-    <version>dc2bf3c3c5</version>
-   </dependency>
-</dependencies>
+<dependency>
+   <groupId>com.github.weltonah</groupId>
+      <artifactId>DataLattesAPI</artifactId>
+   <version>8cf887bb20</version>
+</dependency>
 
 
 ```
