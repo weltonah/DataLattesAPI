@@ -33,7 +33,6 @@ public class ConverterFileToDocument {
 				zf.close();
 				stream.close();
 			} catch (IOException | ParserConfigurationException | SAXException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -45,7 +44,6 @@ public class ConverterFileToDocument {
 				xmlfile = docBuilder.parse(stream);
 				stream.close();
 			} catch (ParserConfigurationException | SAXException | IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 

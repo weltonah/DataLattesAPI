@@ -33,7 +33,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<ArtigoPublicado> BuscaArtigoPublicado() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ARTIGO-PUBLICADO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ArtigoPublicado> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ArtigoPublicado> ListaResultadoBusca = new ArrayList<ArtigoPublicado>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -58,7 +58,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String localDePublicacao = TesteFilhoNo(1, TipoNode, "LOCAL-DE-PUBLICACAO");
 
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -78,7 +78,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<TrabalhoEmEventos> BuscaTrabalhoEmEventos() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//TRABALHO-EM-EVENTOS");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<TrabalhoEmEventos> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<TrabalhoEmEventos> ListaResultadoBusca = new ArrayList<TrabalhoEmEventos>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -109,7 +109,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String nomeDoEventoIngles = TesteFilhoNo(1, TipoNode, "NOME-DO-EVENTO-INGLES");
 
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -131,7 +131,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//LIVRO-PUBLICADO-OU-ORGANIZADO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<LivroPublicadoOuOrganizado> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<LivroPublicadoOuOrganizado> ListaResultadoBusca = new ArrayList<LivroPublicadoOuOrganizado>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -155,7 +155,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String cidadeDaEditora = TesteFilhoNo(1, TipoNode, "CIDADE-DA-EDITORA");
 			String nomeDaEditora = TesteFilhoNo(1, TipoNode, "NOME-DA-EDITORA");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -175,7 +175,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<CapituloDeLivroPublicado> BuscaCapituloDeLivroPublicado() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//CAPITULO-DE-LIVRO-PUBLICADO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<CapituloDeLivroPublicado> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<CapituloDeLivroPublicado> ListaResultadoBusca = new ArrayList<CapituloDeLivroPublicado>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -201,7 +201,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String cidadeDaEditora = TesteFilhoNo(1, TipoNode, "CIDADE-DA-EDITORA");
 			String nomeDaEditora = TesteFilhoNo(1, TipoNode, "NOME-DA-EDITORA");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -221,7 +221,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<TextoEmJornalOuRevista> BuscaTextoEmJornalOuRevista() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//TEXTO-EM-JORNAL-OU-REVISTA");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<TextoEmJornalOuRevista> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<TextoEmJornalOuRevista> ListaResultadoBusca = new ArrayList<TextoEmJornalOuRevista>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -245,7 +245,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String paginaFinal = TesteFilhoNo(1, TipoNode, "PAGINA-FINAL");
 			String localDePublicacao = TesteFilhoNo(1, TipoNode, "LOCAL-DE-PUBLICACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -266,7 +266,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<ArtigoAceitoParaPublicacao> BuscaArtigoAceitoParaPublicacao() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ARTIGO-ACEITO-PARA-PUBLICACAO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ArtigoAceitoParaPublicacao> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ArtigoAceitoParaPublicacao> ListaResultadoBusca = new ArrayList<ArtigoAceitoParaPublicacao>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -290,7 +290,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String paginaFinal = TesteFilhoNo(1, TipoNode, "PAGINA-FINAL");
 			String localDePublicacao = TesteFilhoNo(1, TipoNode, "LOCAL-DE-PUBLICACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -311,7 +311,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<PrefacioPosfacio> BuscaPrefacioPosfacio() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//PREFACIO-POSFACIO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<PrefacioPosfacio> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<PrefacioPosfacio> ListaResultadoBusca = new ArrayList<PrefacioPosfacio>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -336,7 +336,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String editoraDoPrefacioPosfacio = TesteFilhoNo(1, TipoNode, "EDITORA-DO-PREFACIO-POSFACIO");
 			String cidadeDaEditora = TesteFilhoNo(1, TipoNode, "CIDADE-DA-EDITORA");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -357,7 +357,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 	public ArrayList<Traducao> BuscaTraducao() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//TRADUCAO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Traducao> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<Traducao> ListaResultadoBusca = new ArrayList<Traducao>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -383,7 +383,7 @@ public class ProducaoBibliograficaXpath extends AbstractXpath {
 			String fasciculo = TesteFilhoNo(1, TipoNode, "FASCICULO");
 			String serie = TesteFilhoNo(1, TipoNode, "SERIE");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;

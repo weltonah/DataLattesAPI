@@ -107,7 +107,7 @@ public abstract class AbstractXpath {
 	}
 
 	public EquipeProjeto BuscaEquipeProjeto(Node subItens) {
-		ArrayList<IntegranteProjeto> listaintegrante = new ArrayList<>();
+		ArrayList<IntegranteProjeto> listaintegrante = new ArrayList<IntegranteProjeto>();
 		NodeList Nosfilhos = subItens.getChildNodes();
 		for (int k = 0; k < Nosfilhos.getLength(); k++) {
 			Node filho = Nosfilhos.item(k);
@@ -123,7 +123,7 @@ public abstract class AbstractXpath {
 	}
 
 	public FinanciadoresProjeto BuscaFinanciadoresProjeto(Node subItens) {
-		ArrayList<Financiadores> listaintegrante = new ArrayList<>();
+		ArrayList<Financiadores> listaintegrante = new ArrayList<Financiadores>();
 		NodeList Nosfilhos = subItens.getChildNodes();
 		for (int k = 0; k < Nosfilhos.getLength(); k++) {
 			Node filho = Nosfilhos.item(k);
@@ -137,7 +137,7 @@ public abstract class AbstractXpath {
 	}
 
 	public Producoes BuscaProducoes(Node subItens) {
-		ArrayList<ProducaoPesquisa> listaintegrante = new ArrayList<>();
+		ArrayList<ProducaoPesquisa> listaintegrante = new ArrayList<ProducaoPesquisa>();
 		NodeList Nosfilhos = subItens.getChildNodes();
 		for (int k = 0; k < Nosfilhos.getLength(); k++) {
 			Node filho = Nosfilhos.item(k);
@@ -151,7 +151,7 @@ public abstract class AbstractXpath {
 	}
 
 	public Orientacoes BuscaOrientacoes(Node subItens) {
-		ArrayList<OrientacaoPesquisa> listaintegrante = new ArrayList<>();
+		ArrayList<OrientacaoPesquisa> listaintegrante = new ArrayList<OrientacaoPesquisa>();
 		NodeList Nosfilhos = subItens.getChildNodes();
 		for (int k = 0; k < Nosfilhos.getLength(); k++) {
 			Node filho = Nosfilhos.item(k);

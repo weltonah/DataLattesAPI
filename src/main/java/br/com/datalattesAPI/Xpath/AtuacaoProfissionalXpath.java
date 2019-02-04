@@ -39,7 +39,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<Vinculo> BuscaVinculo() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//VINCULOS");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Vinculo> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<Vinculo> ListGraduacaoResult = new ArrayList<Vinculo>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -60,7 +60,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<DirecaoAdministracao> BuscaDirecaoAdministracao() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//DIRECAO-E-ADMINISTRACAO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<DirecaoAdministracao> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<DirecaoAdministracao> ListGraduacaoResult = new ArrayList<DirecaoAdministracao>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -82,7 +82,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<Estagio> BuscaEstagio() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ESTAGIO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Estagio> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<Estagio> ListGraduacaoResult = new ArrayList<Estagio>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -103,7 +103,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<ServicoTecnicoEspecializado> BuscaServicoTecnicoEspecializado() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//SERVICO-TECNICO-ESPECIALIZADO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ServicoTecnicoEspecializado> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<ServicoTecnicoEspecializado> ListGraduacaoResult = new ArrayList<ServicoTecnicoEspecializado>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -124,7 +124,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<ExtensaoUniversitaria> BuscaExtensaoUniversitaria() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//EXTENSAO-UNIVERSITARIA");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ExtensaoUniversitaria> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<ExtensaoUniversitaria> ListGraduacaoResult = new ArrayList<ExtensaoUniversitaria>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -145,7 +145,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<ConselhoComissaoConsultoria> BuscaConselhoComissaoConsultoria() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//CONSELHO-COMISSAO-E-CONSULTORIA");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ConselhoComissaoConsultoria> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<ConselhoComissaoConsultoria> ListGraduacaoResult = new ArrayList<ConselhoComissaoConsultoria>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -166,7 +166,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<Ensino> BuscaEnsino() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ENSINO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Ensino> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<Ensino> ListGraduacaoResult = new ArrayList<Ensino>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -185,7 +185,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<TreinamentoMinistrado> BuscaTreinamentoMinistrado() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//TREINAMENTO-MINISTRADO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<TreinamentoMinistrado> ListGraduacaoResult = new ArrayList<>();
+		ArrayList<TreinamentoMinistrado> ListGraduacaoResult = new ArrayList<TreinamentoMinistrado>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -205,7 +205,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<PesquisaDesenvolvimento> BuscaPesquisaDesenvolvimento() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//PESQUISA-E-DESENVOLVIMENTO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<PesquisaDesenvolvimento> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<PesquisaDesenvolvimento> ListaResultadoBusca = new ArrayList<PesquisaDesenvolvimento>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -216,7 +216,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 			String nomeOrgao = TesteNullNo(TipoNode, "NOME-ORGAO");
 			String nomeUnidade = TesteNullNo(TipoNode, "NOME-UNIDADE");
 
-			ArrayList<LinhaPesquisa> linhaPesquisa = new ArrayList<>();
+			ArrayList<LinhaPesquisa> linhaPesquisa = new ArrayList<LinhaPesquisa>();
 
 			NodeList ListSubItens = TipoNode.getChildNodes();
 			for (int j = 0; j < ListSubItens.getLength(); j++) {
@@ -259,7 +259,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 	public ArrayList<ParticipacaoProjeto> BuscaParticipacaoProjeto() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//PARTICIPACAO-EM-PROJETO");
 		NodeList listaResultaXpath = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ParticipacaoProjeto> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ParticipacaoProjeto> ListaResultadoBusca = new ArrayList<ParticipacaoProjeto>();
 		for (int i = 0; i < listaResultaXpath.getLength(); i++) {
 			Node TipoNode = listaResultaXpath.item(i);
 			String anoInicio = TesteNullNo(TipoNode, "ANO-INICIO");
@@ -270,7 +270,7 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 			String nomeOrgao = TesteNullNo(TipoNode, "NOME-ORGAO");
 			String nomeUnidade = TesteNullNo(TipoNode, "NOME-UNIDADE");
 
-			ArrayList<ProjetoPesquisa> projetoPesquisa = new ArrayList<>();
+			ArrayList<ProjetoPesquisa> projetoPesquisa = new ArrayList<ProjetoPesquisa>();
 
 			NodeList ListSubItens = TipoNode.getChildNodes();
 			for (int j = 0; j < ListSubItens.getLength(); j++) {
@@ -291,10 +291,10 @@ public class AtuacaoProfissionalXpath extends AbstractXpath {
 				String numeroTecnicoNivelMedio = TesteNullNo(subItens, "NUMERO_TECNICO_NIVEL_MEDIO");
 
 				NodeList ListSubItensSub = subItens.getChildNodes();
-				ArrayList<Orientacoes> orientacoes = new ArrayList<>();
-				ArrayList<EquipeProjeto> equipeProjeto = new ArrayList<>();
-				ArrayList<FinanciadoresProjeto> financiadoresProjeto = new ArrayList<>();
-				ArrayList<Producoes> producoes = new ArrayList<>();
+				ArrayList<Orientacoes> orientacoes = new ArrayList<Orientacoes>();
+				ArrayList<EquipeProjeto> equipeProjeto = new ArrayList<EquipeProjeto>();
+				ArrayList<FinanciadoresProjeto> financiadoresProjeto = new ArrayList<FinanciadoresProjeto>();
+				ArrayList<Producoes> producoes = new ArrayList<Producoes>();
 				for (int k = 0; k < ListSubItensSub.getLength(); k++) {
 					Node subItenssub = ListSubItensSub.item(k);
 					if (subItenssub.getNodeName().contentEquals("EQUIPE-DO-PROJETO")) {

@@ -37,7 +37,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<PartituraMusical> BuscaPartituraMusical() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//PARTITURA-MUSICAL");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<PartituraMusical> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<PartituraMusical> ListaResultadoBusca = new ArrayList<PartituraMusical>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -57,7 +57,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String numeroDePaginas = TesteFilhoNo(1, TipoNode, "NUMERO-DE-PAGINAS");
 			String numeroDoCatalogo = TesteFilhoNo(1, TipoNode, "NUMERO-DO-CATALOGO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -77,7 +77,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ApresentacaoDeObraArtistica> BuscaApresentacaoDeObraArtistica() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//APRESENTACAO-DE-OBRA-ARTISTICA");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ApresentacaoDeObraArtistica> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ApresentacaoDeObraArtistica> ListaResultadoBusca = new ArrayList<ApresentacaoDeObraArtistica>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -103,7 +103,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String localDoEvento = TesteFilhoNo(1, TipoNode, "LOCAL-DO-EVENTO");
 			String cidade = TesteFilhoNo(1, TipoNode, "CIDADE");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -124,7 +124,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ApresentacaoEmRadioOuTv> BuscaApresentacaoEmRadioOuTv() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//APRESENTACAO-EM-RADIO-OU-TV");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ApresentacaoEmRadioOuTv> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ApresentacaoEmRadioOuTv> ListaResultadoBusca = new ArrayList<ApresentacaoEmRadioOuTv>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -143,7 +143,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String duracaoEmMinutos = TesteFilhoNo(1, TipoNode, "DURACAO-EM-MINUTOS");
 			String cidade = TesteFilhoNo(1, TipoNode, "CIDADE");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -163,7 +163,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ArranjoMusical> BuscaArranjoMusical() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ARRANJO-MUSICAL");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ArranjoMusical> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ArranjoMusical> ListaResultadoBusca = new ArrayList<ArranjoMusical>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -182,7 +182,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String registroDeDireitoAutoral = TesteFilhoNo(1, TipoNode, "REGISTRO-DE-DIREITO-AUTORAL");
 			String premiacao = TesteFilhoNo(1, TipoNode, "PREMIACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -202,7 +202,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ComposicaoMusical> BuscaComposicaoMusical() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//COMPOSICAO-MUSICAL");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ComposicaoMusical> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ComposicaoMusical> ListaResultadoBusca = new ArrayList<ComposicaoMusical>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -221,7 +221,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String registroDeDireitoAutoral = TesteFilhoNo(1, TipoNode, "REGISTRO-DE-DIREITO-AUTORAL");
 			String premiacao = TesteFilhoNo(1, TipoNode, "PREMIACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -240,7 +240,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<CursoDeCurtaDuracao> BuscaCursoDeCurtaDuracao() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//CURSO-DE-CURTA-DURACAO");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<CursoDeCurtaDuracao> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<CursoDeCurtaDuracao> ListaResultadoBusca = new ArrayList<CursoDeCurtaDuracao>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -260,7 +260,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String localDoEvento = TesteFilhoNo(1, TipoNode, "LOCAL-DO-EVENTO");
 			String cidade = TesteFilhoNo(1, TipoNode, "CIDADE");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -279,7 +279,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ObraDeArtesVisuais> BuscaObraDeArtesVisuais() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//OBRA-DE-ARTES-VISUAIS");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ObraDeArtesVisuais> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ObraDeArtesVisuais> ListaResultadoBusca = new ArrayList<ObraDeArtesVisuais>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -300,7 +300,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String acervo = TesteFilhoNo(1, TipoNode, "ACERVO");
 			String instituicaoPromotora = TesteFilhoNo(1, TipoNode, "INSTITUICAO-PROMOTORA");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -321,7 +321,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//OUTRA-PRODUCAO-ARTISTICA-CULTURAL");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<OutraProducaoArtisticaCultural> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<OutraProducaoArtisticaCultural> ListaResultadoBusca = new ArrayList<OutraProducaoArtisticaCultural>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -343,7 +343,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String exposicao = TesteFilhoNo(1, TipoNode, "EXPOSICAO");
 			String premiacao = TesteFilhoNo(1, TipoNode, "PREMIACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -363,7 +363,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<Sonoplastia> BuscaSonoplastia() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//SONOPLASTIA");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Sonoplastia> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<Sonoplastia> ListaResultadoBusca = new ArrayList<Sonoplastia>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -379,7 +379,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String finalidade = TesteFilhoNo(1, TipoNode, "FINALIDADE");
 			String premiacao = TesteFilhoNo(1, TipoNode, "PREMIACAO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -398,7 +398,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ArtesCenicas> BuscaArtesCenicas() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ARTES-CENICAS");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ArtesCenicas> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ArtesCenicas> ListaResultadoBusca = new ArrayList<ArtesCenicas>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -429,7 +429,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String cidadeDoEvento = TesteFilhoNo(1, TipoNode, "CIDADE-DO-EVENTO");
 			String flagItinerante = TesteFilhoNo(1, TipoNode, "FLAG-ITINERANTE");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -451,7 +451,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<ArtesVisuais> BuscaArtesVisuais() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ARTES-VISUAIS");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<ArtesVisuais> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<ArtesVisuais> ListaResultadoBusca = new ArrayList<ArtesVisuais>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -472,7 +472,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String cidadeDoEvento = TesteFilhoNo(1, TipoNode, "CIDADE-DO-EVENTO");
 			String temporada = TesteFilhoNo(1, TipoNode, "TEMPORADA");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -492,7 +492,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 	public ArrayList<Musica> BuscaMusica() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//MUSICA");
 		NodeList listaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Musica> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<Musica> ListaResultadoBusca = new ArrayList<Musica>();
 		for (int i = 0; i < listaBuscada.getLength(); i++) {
 			Node TipoNode = listaBuscada.item(i);
 
@@ -524,7 +524,7 @@ public class ProducaoArtisticaDaoXpath extends AbstractXpath {
 			String localDoEvento = TesteFilhoNo(1, TipoNode, "LOCAL-DO-EVENTO");
 			String cidadeDoEvento = TesteFilhoNo(1, TipoNode, "CIDADE-DO-EVENTO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;

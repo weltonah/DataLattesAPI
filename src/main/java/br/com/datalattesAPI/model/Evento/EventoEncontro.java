@@ -16,7 +16,6 @@ public class EventoEncontro extends AuxiliarEvento {
 			String localEvento, String cidadeEvento) {
 		super(natureza, titulo, ano, pais, idioma, tipoParticipacao, autores, palavraChave, setorAtividade,
 				areaConhecimento, formaParticipacao, nomeEvento, nomeInstituicao, localEvento, cidadeEvento);
-		// TODO Auto-generated constructor stub
 	}
 
 }

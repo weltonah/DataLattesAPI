@@ -9,7 +9,6 @@ public class FormacaoComplementarExtensaoUniversitario extends FormacaoComplemen
 			String statusCurso, String cargaHoraria, String cadigoInstituicao, String nomeOrgao, String nomeCurso) {
 		super(anoInicio, anoConclusao, nomeInstituicao, statusCurso, cargaHoraria, cadigoInstituicao, nomeOrgao,
 				nomeCurso);
-		// TODO Auto-generated constructor stub
 	}
 
 }

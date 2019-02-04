@@ -50,7 +50,7 @@ public class BancaXpath extends AbstractXpath {
 
 			NodeList ListSubItens = TipoNode.getChildNodes();
 
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;
@@ -121,7 +121,7 @@ public class BancaXpath extends AbstractXpath {
 			String nomeOrgao = TesteFilhoNo(1, TipoNode, "NOME-CURSO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
 
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;

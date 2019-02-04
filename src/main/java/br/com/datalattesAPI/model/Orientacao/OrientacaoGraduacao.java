@@ -15,7 +15,6 @@ public class OrientacaoGraduacao extends OrientacaoAbstract {
 			String flagBolsa, String nomeAgencia, String idOrientador) {
 		super(palavraChave, setorAtividade, areaConhecimento, natureza, titulo, ano, pais, doi, tipoOrientacao,
 				nomeOrientado, nomeInstituicao, nomeOrgao, nomeCurso, flagBolsa, nomeAgencia, idOrientador);
-		// TODO Auto-generated constructor stub
 	}
 
 }

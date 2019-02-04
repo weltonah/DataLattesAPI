@@ -31,7 +31,7 @@ public class OrientacaoXpath extends AbstractXpath {
 			throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile(raiz);
 		NodeList listaOrientaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<OrientacaoAbstract> ListaResultadoOrientacao = new ArrayList<>();
+		ArrayList<OrientacaoAbstract> ListaResultadoOrientacao = new ArrayList<OrientacaoAbstract>();
 		String tipoorientacaoaux;
 		if (nomeObjeto.contentEquals("OrientacaoGraduacao")
 				|| nomeObjeto.contentEquals("OrientacaoAperfeicoamentoEspecializacao")
@@ -123,7 +123,7 @@ public class OrientacaoXpath extends AbstractXpath {
 			throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile(raiz);
 		NodeList listaOrientaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<OrientacaoAbstract> ListaResultadoOrientacao = new ArrayList<>();
+		ArrayList<OrientacaoAbstract> ListaResultadoOrientacao = new ArrayList<OrientacaoAbstract>();
 		for (int i = 0; i < listaOrientaBuscada.getLength(); i++) {
 			Node TipoNode = listaOrientaBuscada.item(i);
 

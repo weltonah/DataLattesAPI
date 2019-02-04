@@ -34,30 +34,23 @@ public class EventoXpath extends AbstractXpath {
 	public ArrayList<AuxiliarEvento> BuscaEvento(String raiz, String nomeObjeto) throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile(raiz);
 		NodeList listaBancaBuscada = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<AuxiliarEvento> ListaResultadoBusca = new ArrayList<>();
+		ArrayList<AuxiliarEvento> ListaResultadoBusca = new ArrayList<AuxiliarEvento>();
 		for (int i = 0; i < listaBancaBuscada.getLength(); i++) {
 			Node TipoNode = listaBancaBuscada.item(i);
-			String natureza = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("NATUREZA")
-					.getTextContent();
-			String titulo = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("TITULO").getTextContent();
-			String ano = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("ANO").getTextContent();
-			String pais = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("PAIS").getTextContent();
-			String idioma = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("IDIOMA").getTextContent();
-			String tipoParticipacao = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("TIPO-PARTICIPACAO")
-					.getTextContent();
-			String formaParticipacao = TipoNode.getChildNodes().item(0).getAttributes()
-					.getNamedItem("FORMA-PARTICIPACAO").getTextContent();
-			String nomeEvento = TipoNode.getChildNodes().item(1).getAttributes().getNamedItem("NOME-DO-EVENTO")
-					.getTextContent();
-			String nomeInstituicao = TipoNode.getChildNodes().item(1).getAttributes().getNamedItem("NOME-INSTITUICAO")
-					.getTextContent();
-			String localEvento = TipoNode.getChildNodes().item(1).getAttributes().getNamedItem("LOCAL-DO-EVENTO")
-					.getTextContent();
-			String cidadeEvento = TipoNode.getChildNodes().item(1).getAttributes().getNamedItem("CIDADE-DO-EVENTO")
-					.getTextContent();
+			String natureza = TesteFilhoNo(0, TipoNode, "NATUREZA");
+			String titulo =  TesteFilhoNo(0, TipoNode, "TITULO");
+			String ano =  TesteFilhoNo(0, TipoNode, "ANO");
+			String pais =  TesteFilhoNo(0, TipoNode, "PAIS");
+			String idioma =  TesteFilhoNo(0, TipoNode, "IDIOMA");
+			String tipoParticipacao =  TesteFilhoNo(0, TipoNode, "TIPO-PARTICIPACAO");
+			String formaParticipacao =  TesteFilhoNo(0, TipoNode, "FORMA-PARTICIPACAO");
+			String nomeEvento =  TesteFilhoNo(1, TipoNode, "NOME-DO-EVENTO");
+			String nomeInstituicao =  TesteFilhoNo(1, TipoNode, "NOME-INSTITUICAO");
+			String localEvento =  TesteFilhoNo(1, TipoNode, "LOCAL-DO-EVENTO");
+			String cidadeEvento =  TesteFilhoNo(1, TipoNode, "CIDADE-DO-EVENTO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
 
-			ArrayList<Autor> autorlista = new ArrayList<>();
+			ArrayList<Autor> autorlista = new ArrayList<Autor>();
 			PalavraChave palavraChave = null;
 			SetorAtividade setorAtividade = null;
 			AreaConhecimento areaConhecimento = null;

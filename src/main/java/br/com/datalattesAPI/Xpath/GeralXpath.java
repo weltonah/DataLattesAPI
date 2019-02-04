@@ -100,7 +100,7 @@ public class GeralXpath extends AbstractXpath {
 	private AreaAtuacao BuscaAreaAtuacao() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//AREA-DE-ATUACAO");
 		NodeList listaIdiomaBusca = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Area> ListArea = new ArrayList<>();
+		ArrayList<Area> ListArea = new ArrayList<Area>();
 		AreaAtuacao areaAtuacao = null;
 		for (int i = 0; i < listaIdiomaBusca.getLength(); i++) {
 			Node TipoNode = listaIdiomaBusca.item(i);
@@ -118,7 +118,7 @@ public class GeralXpath extends AbstractXpath {
 	private ArrayList<EnderecoProfissional> BuscaEnderecoProfissional() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ENDERECO-PROFISSIONAL");
 		NodeList listaIdiomaBusca = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<EnderecoProfissional> ListEndereco = new ArrayList<>();
+		ArrayList<EnderecoProfissional> ListEndereco = new ArrayList<EnderecoProfissional>();
 		for (int i = 0; i < listaIdiomaBusca.getLength(); i++) {
 			Node TipoNode = listaIdiomaBusca.item(i);
 			String pais = TesteNullNo(TipoNode, "PAIS");
@@ -142,7 +142,7 @@ public class GeralXpath extends AbstractXpath {
 	private ArrayList<EnderecoResidencial> BuscaEnderecoResidencial() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//ENDERECO-RESIDENCIAL");
 		NodeList listaIdiomaBusca = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<EnderecoResidencial> ListEndereco = new ArrayList<>();
+		ArrayList<EnderecoResidencial> ListEndereco = new ArrayList<EnderecoResidencial>();
 		for (int i = 0; i < listaIdiomaBusca.getLength(); i++) {
 			Node TipoNode = listaIdiomaBusca.item(i);
 			String pais = TesteNullNo(TipoNode, "PAIS");
@@ -164,7 +164,7 @@ public class GeralXpath extends AbstractXpath {
 	private ArrayList<Premio> BuscaPremio() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//PREMIO-TITULO");
 		NodeList listaIdiomaBusca = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Premio> ListPremio = new ArrayList<>();
+		ArrayList<Premio> ListPremio = new ArrayList<Premio>();
 		for (int i = 0; i < listaIdiomaBusca.getLength(); i++) {
 			Node TipoNode = listaIdiomaBusca.item(i);
 			String nomePremioTitulo = TesteNullNo(TipoNode, "NOME-DO-PREMIO-OU-TITULO");
@@ -180,7 +180,7 @@ public class GeralXpath extends AbstractXpath {
 	private ArrayList<Idioma> BuscaIdioma() throws XPathExpressionException {
 		XPathExpression expr = this.xpath.compile("//IDIOMA");
 		NodeList listaIdiomaBusca = (NodeList) expr.evaluate(this.xmlfile, XPathConstants.NODESET);
-		ArrayList<Idioma> Listidioma = new ArrayList<>();
+		ArrayList<Idioma> Listidioma = new ArrayList<Idioma>();
 		for (int i = 0; i < listaIdiomaBusca.getLength(); i++) {
 			Node TipoNode = listaIdiomaBusca.item(i);
 			String nomeIdioma = TesteNullNo(TipoNode, "IDIOMA");
