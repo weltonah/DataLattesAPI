@@ -21,6 +21,7 @@ import br.com.datalattesAPI.model.Banca.BancaLivreDocencia;
 import br.com.datalattesAPI.model.Banca.BancaMestrado;
 import br.com.datalattesAPI.model.Banca.BancaProfessorTitular;
 import br.com.datalattesAPI.model.Banca.BancaQualificacaoDoutorado;
+import br.com.datalattesAPI.model.Banca.BancaQualificacaoMestrado;
 import br.com.datalattesAPI.model.Geral.AreaConhecimento;
 import br.com.datalattesAPI.model.Geral.PalavraChave;
 import br.com.datalattesAPI.model.Geral.SetorAtividade;
@@ -158,14 +159,25 @@ public class BancaXpath extends AbstractXpath {
 						setorAtividade, areaConhecimento, nomeInstituicao, nomeOrgao, nomeCandidato, nomeCurso);
 				break;
 			case "BancaQualificacaoDoutorado":
+				if(natureza.contentEquals("Exame de qualificação de doutorado")) {
 				itemResultado = new BancaQualificacaoDoutorado(natureza, titulo, ano, pais, idioma, autores,
 						palavraChave, setorAtividade, areaConhecimento, nomeInstituicao, nomeOrgao, nomeCandidato,
 						nomeCurso);
+				}
+				break;
+			case "BancaQualificacaoMestrado":
+				if(natureza.contentEquals("Exame de qualificação de mestrado")) {
+				itemResultado = new BancaQualificacaoMestrado(natureza, titulo, ano, pais, idioma, autores,
+						palavraChave, setorAtividade, areaConhecimento, nomeInstituicao, nomeOrgao, nomeCandidato,
+						nomeCurso);
+				}
 				break;
 			case "BancaGraduacao":
 				itemResultado = new BancaGraduacao(natureza, titulo, ano, pais, idioma, autores, palavraChave,
 						setorAtividade, areaConhecimento, nomeInstituicao, nomeOrgao, nomeCandidato, nomeCurso);
 				break;
+				
+				
 			default:
 				itemResultado = new BancaAperfeicoamentoEspecializacao(natureza, titulo, ano, pais, idioma, autores,
 						palavraChave, setorAtividade, areaConhecimento, nomeInstituicao, nomeOrgao, nomeCandidato,

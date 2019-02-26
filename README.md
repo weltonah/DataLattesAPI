@@ -87,6 +87,7 @@ public class main {
 | .BancaMestrado();  | Participação de Banca de Mestrado  | 
 | .BancaDoutorado();  | Participação de Banca de Doutorado  | 
 | .BancaQualificacaoDoutorado();  | Participação de Banca de qualificação para doutorado  | 
+| .BancaQualificacaoMestrado();  | Participação de Banca de qualificação para Mestrado  | 
 | .BancaGraduacao();  | Participação de Banca de graduação  | 
 | .BancaAperfeicoamentoEspecializacao();  | Participação de Banca de formação em aperfeiçoamento ou especialização  | 
 

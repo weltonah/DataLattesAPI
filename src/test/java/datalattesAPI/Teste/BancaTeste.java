@@ -17,6 +17,8 @@ import br.com.datalattesAPI.model.Banca.BancaLivreDocencia;
 import br.com.datalattesAPI.model.Banca.BancaMestrado;
 import br.com.datalattesAPI.model.Banca.BancaProfessorTitular;
 import br.com.datalattesAPI.model.Banca.BancaQualificacaoDoutorado;
+import br.com.datalattesAPI.model.Banca.BancaQualificacaoMestrado;
+
 
 public class BancaTeste {
 
@@ -71,9 +73,17 @@ public class BancaTeste {
 	@Test
 	public void BancaQualificacaoDoutorado() throws XPathExpressionException {
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		File file = new File(classLoader.getResource("static/testFile/" + "Alessandreiacurriculo.xml").getFile());
+		File file = new File(classLoader.getResource("static/testFile/" + "Alexcurriculo.xml").getFile());
 		DTapi dt = new DTapi(file);
 		ArrayList<BancaQualificacaoDoutorado> result = dt.getBancaDao().BancaQualificacaoDoutorado();
+	}
+	
+	@Test
+	public void BancaQualificacaoMestrado() throws XPathExpressionException {
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		File file = new File(classLoader.getResource("static/testFile/" + "Alexcurriculo.xml").getFile());
+		DTapi dt = new DTapi(file);
+		ArrayList<BancaQualificacaoMestrado> result = dt.getBancaDao().BancaQualificacaoMestrado();
 	}
 
 	@Test

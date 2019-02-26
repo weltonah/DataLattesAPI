@@ -18,6 +18,7 @@ import br.com.datalattesAPI.model.Banca.BancaLivreDocencia;
 import br.com.datalattesAPI.model.Banca.BancaMestrado;
 import br.com.datalattesAPI.model.Banca.BancaProfessorTitular;
 import br.com.datalattesAPI.model.Banca.BancaQualificacaoDoutorado;
+import br.com.datalattesAPI.model.Banca.BancaQualificacaoMestrado;
 
 public class BancaDao {
 	public BancaXpath bancaXpath;
@@ -79,6 +80,14 @@ public class BancaDao {
 				.BuscaBancaFormacao("//PARTICIPACAO-EM-BANCA-DE-EXAME-QUALIFICACAO", "BancaQualificacaoDoutorado");
 		ArrayList<BancaQualificacaoDoutorado> result = (ArrayList<BancaQualificacaoDoutorado>) resposta.stream()
 				.map(u -> (BancaQualificacaoDoutorado) u).collect(Collectors.toList());
+		return result;
+	}
+	
+	public ArrayList<BancaQualificacaoMestrado> BancaQualificacaoMestrado() throws XPathExpressionException {
+		ArrayList<BancaFormacao> resposta = this.bancaXpath
+				.BuscaBancaFormacao("//PARTICIPACAO-EM-BANCA-DE-EXAME-QUALIFICACAO", "BancaQualificacaoMestrado");
+		ArrayList<BancaQualificacaoMestrado> result = (ArrayList<BancaQualificacaoMestrado>) resposta.stream()
+				.map(u -> (BancaQualificacaoMestrado) u).collect(Collectors.toList());
 		return result;
 	}
 
