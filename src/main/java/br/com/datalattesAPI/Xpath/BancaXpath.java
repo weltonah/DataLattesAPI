@@ -117,9 +117,9 @@ public class BancaXpath extends AbstractXpath {
 			String idioma = TesteFilhoNo(0, TipoNode, "IDIOMA");
 			
 			String nomeCandidato = TesteFilhoNo(1, TipoNode, "NOME-DO-CANDIDATO");
-			String nomeInstituicao = TesteFilhoNo(1, TipoNode, "NOME-ORGAO");
-			String nomeCurso = TesteFilhoNo(1, TipoNode, "NOME-INSTITUICAO");
-			String nomeOrgao = TesteFilhoNo(1, TipoNode, "NOME-CURSO");
+			String nomeOrgao  = TesteFilhoNo(1, TipoNode, "NOME-ORGAO");
+			String nomeInstituicao = TesteFilhoNo(1, TipoNode, "NOME-INSTITUICAO");
+			String nomeCurso  = TesteFilhoNo(1, TipoNode, "NOME-CURSO");
 			NodeList ListSubItens = TipoNode.getChildNodes();
 
 			ArrayList<Autor> autorlista = new ArrayList<Autor>();
