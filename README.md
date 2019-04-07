@@ -39,7 +39,7 @@ public class main {
 <dependency>
    <groupId>com.github.weltonah</groupId>
       <artifactId>DataLattesAPI</artifactId>
-   <version>43e8314eac</version>
+   <version>43deb58db7</version>
 </dependency>
 
 
