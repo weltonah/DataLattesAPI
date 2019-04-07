@@ -95,19 +95,18 @@ public class OrientacaoXpath extends AbstractXpath {
 				break;
 
 			default:
-				tipo = TipoNode.getChildNodes().item(0).getAttributes().getNamedItem("TIPO").getTextContent();
 				if (nomeObjeto.contentEquals("OrientacaoGraduacao")
-						&& tipo.contentEquals("TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO"))
+						&& natureza.contentEquals("TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO"))
 					itemResultado = new OrientacaoGraduacao(palavraChave, setorAtividade, areaConhecimento, natureza,
 							titulo, ano, pais, doi, tipoOrientacao, nomeOrientado, nomeInstituicao, nomeOrgao,
 							nomeCurso, flagBolsa, nomeAgencia, idOrientador);
 				if (nomeObjeto.contentEquals("OrientacaoAperfeicoamentoEspecializacao")
-						&& tipo.contentEquals("MONOGRAFIA_DE_CONCLUSAO_DE_CURSO_APERFEICOAMENTO_E_ESPECIALIZACAO"))
+						&& natureza.contentEquals("MONOGRAFIA_DE_CONCLUSAO_DE_CURSO_APERFEICOAMENTO_E_ESPECIALIZACAO"))
 					itemResultado = new OrientacaoAperfeicoamentoEspecializacao(palavraChave, setorAtividade,
 							areaConhecimento, natureza, titulo, ano, pais, doi, tipoOrientacao, nomeOrientado,
 							nomeInstituicao, nomeOrgao, nomeCurso, flagBolsa, nomeAgencia, idOrientador);
 				if (nomeObjeto.contentEquals("OrientacaoIniciacaoCientifica")
-						&& tipo.contentEquals("INICIACAO_CIENTIFICA"))
+						&& natureza.contentEquals("INICIACAO_CIENTIFICA"))
 					itemResultado = new OrientacaoIniciacaoCientifica(palavraChave, setorAtividade, areaConhecimento,
 							natureza, titulo, ano, pais, doi, tipoOrientacao, nomeOrientado, nomeInstituicao, nomeOrgao,
 							nomeCurso, flagBolsa, nomeAgencia, idOrientador);
